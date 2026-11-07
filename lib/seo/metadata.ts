@@ -99,6 +99,23 @@ export function generateSoftwareApplicationSchema() {
   };
 }
 
+export function generateWebSiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    alternateName: "अक्षर अभ्यास",
+    url: SITE_URL,
+    description:
+      "Free online touch typing tutor, speed test, and typing games platform. Interactive color-coded virtual keyboard, 6 progressive learning levels, 60 lessons, and 100% private local storage.",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${SITE_URL}/typing-tips?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  };
+}
+
 export function generateBreadcrumbSchema(items: { name: string; item: string }[]) {
   return {
     "@context": "https://schema.org",

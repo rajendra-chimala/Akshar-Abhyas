@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { generateSoftwareApplicationSchema } from "@/lib/seo/metadata";
+import { generateSoftwareApplicationSchema, generateWebSiteSchema } from "@/lib/seo/metadata";
 
 export const viewport: Viewport = {
   themeColor: "#16a34a",
@@ -68,13 +68,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const schema = generateSoftwareApplicationSchema();
+  const webSiteSchema = generateWebSiteSchema();
 
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
       </head>
       <body className="min-h-screen flex flex-col bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 font-sans antialiased selection:bg-brand-100 selection:text-brand-900">
