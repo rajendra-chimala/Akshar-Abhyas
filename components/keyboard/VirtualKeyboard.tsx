@@ -76,7 +76,7 @@ export const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
       {/* Keyboard Matrix */}
       <div className="w-full max-w-4xl p-2 sm:p-3 bg-slate-100/90 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 rounded-xl shadow-inner flex flex-col gap-1 sm:gap-1.5 overflow-x-auto">
         {KEYBOARD_ROWS.map((row, rowIdx) => (
-          <div key={rowIdx} className="flex gap-1 sm:gap-1.5 justify-center w-full">
+          <div key={rowIdx} className="flex gap-1 sm:gap-1.5 w-full">
             {row.map((key) => {
               const isTarget = targetCode === key.code;
               const isShiftTarget =
@@ -85,6 +85,9 @@ export const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
                   (shiftHand === "right" && key.code === "ShiftRight"));
               const isPressed = activeKeyCode === key.code;
               const fingerColor = FINGER_COLORS[key.finger];
+              const isLetter = key.code.startsWith("Key");
+              const displayLabel = showLabels ? (isLetter ? key.label.toUpperCase() : key.label) : "";
+              const displayShiftLabel = showLabels && !isLetter ? key.shiftLabel : null;
 
               // Dynamic styling based on states
               let keyBg = "bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-100";
@@ -114,11 +117,11 @@ export const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
                   key={key.code}
                   type="button"
                   tabIndex={-1}
+                  style={{ flex: key.units || 1 }}
                   onClick={() => onKeyClick && onKeyClick(key.label, key.code)}
                   className={`
                     relative h-9 sm:h-11 rounded-lg border flex flex-col items-center justify-center
                     font-mono font-medium text-xs sm:text-sm transition-all duration-100 select-none
-                    ${key.width || "w-10 sm:w-11"}
                     ${keyBg} ${keyBorder} ${keyShadow}
                     hover:brightness-95 active:scale-95
                   `}
@@ -130,15 +133,15 @@ export const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
                   )}
 
                   {/* Key Shift Label */}
-                  {showLabels && key.shiftLabel && (
+                  {displayShiftLabel && (
                     <span className="text-[10px] leading-none opacity-60">
-                      {key.shiftLabel}
+                      {displayShiftLabel}
                     </span>
                   )}
 
                   {/* Main Key Label */}
-                  <span className="leading-tight">
-                    {showLabels ? key.label : ""}
+                  <span className="leading-tight font-medium">
+                    {displayLabel}
                   </span>
                 </button>
               );

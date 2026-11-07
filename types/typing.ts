@@ -10,6 +10,7 @@ export interface KeyDefinition {
   hand: Hand;
   row: number; // 0: function/number row, 1: QWERTY, 2: ASDF, 3: ZXCV, 4: Space row
   width?: string;
+  units?: number;
   isSpecial?: boolean;
 }
 

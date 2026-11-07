@@ -60,6 +60,9 @@ export const metadata: Metadata = {
     description: "Free online touch typing tutor, speed test, and typing games platform.",
     images: ["/logo.png"],
   },
+  verification: {
+    google: "google2d5db8e6c43e0b08",
+  },
 };
 
 export default function RootLayout({

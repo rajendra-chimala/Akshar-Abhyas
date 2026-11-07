@@ -41,6 +41,12 @@ describe("keyboardData mapping", () => {
     expect(KEYBOARD_ROWS.length).toBe(5); // row 0 to 4
     // Home row (row 2) contains 13 keys (Caps, a-l, ;, ', Enter)
     expect(KEYBOARD_ROWS[2].length).toBe(13);
+
+    // Each row must sum up to exactly 15 units for standard keyboard alignment
+    for (let r = 0; r < 5; r++) {
+      const rowUnits = KEYBOARD_ROWS[r].reduce((sum, k) => sum + (k.units || 1), 0);
+      expect(rowUnits).toBe(15);
+    }
   });
 });
 
