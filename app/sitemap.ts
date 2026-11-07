@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { ALL_LESSONS } from "@/data/lessons";
 import { EDUCATIONAL_ARTICLES } from "@/data/articles";
+import { BLOG_POSTS } from "@/data/blog";
 
 const BASE_URL = "https://aksharabhyas.com";
 
@@ -22,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/typing-games/word-accuracy`, lastModified: currentDate, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/touch-typing`, lastModified: currentDate, changeFrequency: "monthly", priority: 0.85 },
     { url: `${BASE_URL}/learn-keyboard-typing`, lastModified: currentDate, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${BASE_URL}/blog`, lastModified: currentDate, changeFrequency: "daily", priority: 0.9 },
     { url: `${BASE_URL}/typing-tips`, lastModified: currentDate, changeFrequency: "weekly", priority: 0.85 },
     { url: `${BASE_URL}/typing-certificate`, lastModified: currentDate, changeFrequency: "monthly", priority: 0.75 },
     { url: `${BASE_URL}/progress`, lastModified: currentDate, changeFrequency: "monthly", priority: 0.7 },
@@ -47,6 +49,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...lessonRoutes, ...articleRoutes];
+  // Dynamic blog routes (9 articles)
+  const blogRoutes: MetadataRoute.Sitemap = BLOG_POSTS.map((b) => ({
+    url: `${BASE_URL}/blog/${b.slug}`,
+    lastModified: currentDate,
+    changeFrequency: "weekly",
+    priority: 0.85,
+  }));
+
+  return [...staticRoutes, ...lessonRoutes, ...articleRoutes, ...blogRoutes];
 }
 

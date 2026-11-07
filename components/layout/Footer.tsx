@@ -104,6 +104,11 @@ export const Footer: React.FC = () => {
           </h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li>
+              <Link href="/blog" className="hover:text-brand-600 transition font-medium text-brand-700 dark:text-brand-300">
+                Typing Blog & Benchmarks
+              </Link>
+            </li>
+            <li>
               <Link href="/touch-typing" className="hover:text-brand-600 transition">
                 Touch Typing Master Guide
               </Link>

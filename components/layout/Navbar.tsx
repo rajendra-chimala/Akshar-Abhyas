@@ -16,6 +16,7 @@ import {
   Menu,
   X,
   Award,
+  Newspaper,
 } from "lucide-react";
 
 export const Navbar: React.FC = () => {
@@ -55,6 +56,7 @@ export const Navbar: React.FC = () => {
     { href: "/typing-games", label: "Games", icon: Gamepad2 },
     { href: "/keyboard-test", label: "Keyboard Test", icon: Sliders },
     { href: "/progress", label: "Progress", icon: TrendingUp },
+    { href: "/blog", label: "Blog", icon: Newspaper },
   ];
 
   const isActive = (href: string) => {
