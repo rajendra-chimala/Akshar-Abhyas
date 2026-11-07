@@ -43,3 +43,4 @@ describe("keyboardData mapping", () => {
     expect(KEYBOARD_ROWS[2].length).toBe(13);
   });
 });
+

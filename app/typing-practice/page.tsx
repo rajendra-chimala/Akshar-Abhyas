@@ -7,3 +7,4 @@ import { TypingTestPageContent } from "./PracticeContent";
 export default function TypingPracticePage() {
   return <TypingTestPageContent />;
 }
+

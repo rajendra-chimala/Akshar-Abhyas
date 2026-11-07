@@ -181,3 +181,4 @@ export default function ArticleDetailPage({ params }: { params: { slug: string }
     </article>
   );
 }
+

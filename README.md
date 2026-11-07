@@ -166,3 +166,4 @@ This project is configured to deploy directly to Vercel with zero backend or dat
 
 ## 📄 License
 MIT License. Free for educational and personal use.
+

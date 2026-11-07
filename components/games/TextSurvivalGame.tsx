@@ -181,3 +181,4 @@ export const TextSurvivalGame: React.FC = () => {
     </div>
   );
 };
+

@@ -66,24 +66,16 @@ export const Navbar: React.FC = () => {
     <header className="sticky top-0 z-50 w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group">
-          <div className="relative w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center bg-brand-50 dark:bg-emerald-950/60 border border-brand-200 dark:border-emerald-800 group-hover:scale-105 transition">
+        <Link href="/" className="flex items-center group">
+          <div className="relative flex items-center dark:bg-white/95 dark:px-2.5 dark:py-1 dark:rounded-xl transition-transform group-hover:scale-[1.02]">
             <Image
-              src="/icon.png"
-              alt="Akshar Abhyas Icon"
-              width={32}
-              height={32}
-              className="object-contain"
+              src="/logo.png"
+              alt="Akshar Abhyas - अक्षर अभ्यास"
+              width={180}
+              height={47}
+              className="h-9 sm:h-10 w-auto object-contain"
               priority
             />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-extrabold text-lg tracking-tight text-slate-900 dark:text-slate-100 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition">
-              Akshar Abhyas
-            </span>
-            <span className="text-[10px] text-muted-foreground font-medium -mt-1 hidden sm:block">
-              Learn every letter • Master touch typing
-            </span>
           </div>
         </Link>
 
@@ -184,3 +176,4 @@ export const Navbar: React.FC = () => {
     </header>
   );
 };
+

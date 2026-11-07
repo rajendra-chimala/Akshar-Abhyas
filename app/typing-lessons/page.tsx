@@ -185,3 +185,4 @@ export default function TypingLessonsCurriculumPage() {
     </div>
   );
 }
+

@@ -168,3 +168,4 @@ export const WordAccuracyGame: React.FC = () => {
     </div>
   );
 };
+

@@ -37,3 +37,4 @@ describe("typingMetrics calculations", () => {
     expect(getPerformanceRating(125, 98)).toBe("Typing Ninja");
   });
 });
+

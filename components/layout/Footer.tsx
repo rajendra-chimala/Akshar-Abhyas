@@ -9,19 +9,16 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
         {/* Brand Column */}
         <div className="lg:col-span-2 space-y-4">
-          <Link href="/" className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-lg overflow-hidden flex items-center justify-center bg-white dark:bg-slate-800 border border-brand-200 dark:border-emerald-800 shadow-sm">
+          <Link href="/" className="inline-flex items-center group">
+            <div className="relative flex items-center dark:bg-white/95 dark:px-3 dark:py-1.5 dark:rounded-xl transition-transform group-hover:scale-[1.02]">
               <Image
-                src="/icon.png"
-                alt="Akshar Abhyas"
-                width={36}
-                height={36}
-                className="object-contain"
+                src="/logo.png"
+                alt="Akshar Abhyas - अक्षर अभ्यास"
+                width={190}
+                height={50}
+                className="h-10 w-auto object-contain"
               />
             </div>
-            <span className="font-extrabold text-xl tracking-tight text-slate-900 dark:text-slate-100">
-              Akshar Abhyas
-            </span>
           </Link>
           <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
             A free, distraction-free online touch typing tutor, speed test, and typing games platform. Designed to help absolute beginners become confident touch typists.
@@ -153,3 +150,4 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
+

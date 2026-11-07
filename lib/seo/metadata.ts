@@ -111,3 +111,4 @@ export function generateBreadcrumbSchema(items: { name: string; item: string }[]
     })),
   };
 }
+

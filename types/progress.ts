@@ -45,3 +45,4 @@ export interface UserProgress {
   theme: "light" | "dark" | "system";
   lastActive: string;
 }
+

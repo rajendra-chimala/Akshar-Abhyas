@@ -54,3 +54,4 @@ export function formatDuration(seconds: number): string {
   if (mins === 0) return `${secs}s`;
   return `${mins}m ${secs}s`;
 }
+

@@ -224,3 +224,4 @@ export const FallingLettersGame: React.FC = () => {
     </div>
   );
 };
+

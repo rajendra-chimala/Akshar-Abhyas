@@ -152,3 +152,4 @@ export const LEVEL_2_LESSONS: Lesson[] = [
     targetWpm: 25,
   },
 ];
+

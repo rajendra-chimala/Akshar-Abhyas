@@ -235,3 +235,4 @@ export function getFingerDescription(hand: Hand, finger: Finger): string {
   const fingerStr = finger.charAt(0).toUpperCase() + finger.slice(1);
   return `${handStr} ${fingerStr}`;
 }
+

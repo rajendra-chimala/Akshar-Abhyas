@@ -37,3 +37,4 @@ describe("curriculum data integrity", () => {
     expect(getPrevLesson(lastLesson.id)?.id).toBe(ALL_LESSONS[ALL_LESSONS.length - 2].id);
   });
 });
+

@@ -285,3 +285,4 @@ export const EDUCATIONAL_ARTICLES: EducationalArticle[] = [
 export function getArticleBySlug(slug: string): EducationalArticle | undefined {
   return EDUCATIONAL_ARTICLES.find((a) => a.slug === slug);
 }
+

@@ -175,3 +175,4 @@ export const VirtualKeyboard: React.FC<VirtualKeyboardProps> = ({
     </div>
   );
 };
+

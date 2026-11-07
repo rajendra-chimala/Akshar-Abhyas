@@ -255,3 +255,4 @@ export const WordRainGame: React.FC = () => {
     </div>
   );
 };
+

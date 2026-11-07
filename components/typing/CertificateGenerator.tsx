@@ -175,3 +175,4 @@ export const CertificateGenerator: React.FC<CertificateGeneratorProps> = ({
     </div>
   );
 };
+

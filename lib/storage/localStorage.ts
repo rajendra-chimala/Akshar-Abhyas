@@ -187,3 +187,4 @@ export function resetProgress(): void {
   localStorage.removeItem(STORAGE_KEY);
   window.dispatchEvent(new Event("akshar-progress-updated"));
 }
+

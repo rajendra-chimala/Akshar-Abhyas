@@ -91,3 +91,4 @@ export const TypingDisplay: React.FC<TypingDisplayProps> = ({
     </div>
   );
 };
+
